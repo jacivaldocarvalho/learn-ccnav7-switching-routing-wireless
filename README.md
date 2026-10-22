@@ -1,8 +1,24 @@
-# CCNAv7: Switching, Routing, and Wireless Essentials (SRWE)
+# CCNAv7: Switching, Routing, and Wireless Essentials (SRWE) 
+
+![Cisco](https://img.shields.io/badge/Cisco-CCNAv7-049FD9?logo=cisco&logoColor=white)
+
 
 **Provider:** NIC.br / Cisco Networking Academy  
-**Status:** Not started  
+**Status:** Module 01 study and review underway; practical labs pending  
 **Purpose:** Professional knowledge refresh, hands-on networking, and reproducible technical reference.
+
+## Table of Contents
+
+- [CCNAv7: Switching, Routing, and Wireless Essentials (SRWE)](#ccnav7-switching-routing-and-wireless-essentials-srwe)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Repository Structure](#repository-structure)
+    - [Current Progress](#current-progress)
+  - [Confirmed Modules](#confirmed-modules)
+  - [Assessments](#assessments)
+  - [Labs and Evidence](#labs-and-evidence)
+  - [Practical Insights: Shell and Python for Network Engineering](#practical-insights-shell-and-python-for-network-engineering)
+  - [References and Disclaimer](#references-and-disclaimer)
 
 ## Overview
 
@@ -19,21 +35,21 @@ learn-ccnav7-switching-routing-wireless/
 └── assets/           # Shared diagrams and supporting assets
 ```
 
-## Course Progress
+### Current Progress
 
-| Milestone | Status | Notes |
-|---|---|---|
-| Core modules | Not started | 16 confirmed by the supplied outline |
-| Supplemental module | Not started | CCNA 200-301 v1.1 |
-| Assessments | Not started | Inventory confirmed; scores and question counts unknown |
-| Labs | Not started | No individual lab instructions or results supplied |
-| Course completion | Not started | No credential or completion claim |
+| Assessment | Status |
+|---|---|
+| Module 01 Review | Completed | 
+| Checkpoint Exams | Completed  |
+| labs | Pending | 
+
+
 
 ## Confirmed Modules
 
 | No. | Module | Status |
 |---|---|---|
-| 01 | [Basic Device Configuration](modules/01-basic-device-configuration/README.md) | Not started |
+| 01 | [Basic Device Configuration](modules/01-basic-device-configuration/README.md) | In progress (labs pending) |
 | 02 | [Switching Concepts](modules/02-switching-concepts/README.md) | Not started |
 | 03 | [VLANs](modules/03-vlans/README.md) | Not started |
 | 04 | [Inter-VLAN Routing](modules/04-inter-vlan-routing/README.md) | Not started |
@@ -53,7 +69,10 @@ learn-ccnav7-switching-routing-wireless/
 
 ## Assessments
 
-See [confirmed assessment inventory](exams/README.md). The outline lists five checkpoint exams, an initial knowledge check, three practice Packet Tracer assessments, a practice final exam, a course final exam, and a final Packet Tracer assessment. Counts of questions, grades, and completion remain unconfirmed.
+The CCNAv7 SRWE course includes five checkpoint exams, an initial knowledge check, three practice Packet Tracer assessments, a practice
+final exam, a course final exam, and a final Packet Tracer assessment.
+
+Assessment documentation will be added progressively as the course advances.
 
 ## Labs and Evidence
 
@@ -63,12 +82,6 @@ Actual lab directories, configurations, topologies, and evidence will be added o
 
 Each module will include a targeted enrichment section connecting Cisco networking concepts to useful Linux shell or Python tasks, such as parsing command outputs, validating IP plans, checking connectivity, or auditing configuration data. These exercises will be labeled as independent educational/professional extensions, not official NetAcad activities. Examples and results will be identified as illustrative or observed.
 
-## Documentation Conventions
-
-- All repository documentation, code comments, and commits are in English.
-- The course outline is the source for module names and order; lesson details require the corresponding official material.
-- Use GitHub Flavored Markdown, accurate Cisco IOS mode prompts, and clearly identified sample output.
-- Follow Conventional Commits; keep links relative and validate Markdown before publication.
 
 ## References and Disclaimer
 
