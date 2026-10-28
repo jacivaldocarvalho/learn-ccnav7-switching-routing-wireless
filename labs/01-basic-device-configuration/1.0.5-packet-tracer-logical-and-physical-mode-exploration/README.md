@@ -1,10 +1,7 @@
-# Lab 1.0.5 — Packet Tracer Logical and Physical Mode Exploration
+# Lab 1.0.5 — Packet Tracer: Logical and Physical Mode Exploration
 
-**Course:** CCNAv7: Switching, Routing, and Wireless Essentials (SRWE)  
-**Module:** 1  
-**Activity:** 1.0.5  
-**Status:** Completed (learner-confirmed)  
-**Environment:** Cisco Packet Tracer
+**Course:** CCNAv7 — Switching, Routing, and Wireless Essentials (SRWE)  
+**Environment:** Cisco Packet Tracer; Logical and Physical modes, branch office wiring closet, routers, switches, access point, server, PC, and laptop
 
 ## 1. Objectives
 
@@ -46,8 +43,6 @@ The **Network Devices** category contains six subcategories:
 Other bottom-toolbar categories described in the activity include End Devices, Components, Connections, Miscellaneous, and Multiuser Connection.
 
 **Answer:** Routers, Switches, Hubs, Wireless Devices, Security, and WAN Emulation.
-
-> No screenshot was provided specifically for Part 1.
 
 ## 4. Part 2 — Explore Devices in a Wiring Closet
 

@@ -1,0 +1,21 @@
+PC-2 — Static IPv4 configuration
+
+Set the Packet Tracer display name to PC-2.
+Open Desktop > IP Configuration and select Static for FastEthernet0:
+IPv4 address: 10.10.20.10
+Subnet mask: 255.255.255.0
+Default gateway: 10.10.20.1
+DNS server: leave unset (this lab uses IP addresses).
+
+Desktop > Command Prompt — run these checks:
+ipconfig /all
+ping 10.10.10.1
+ping 10.10.10.2
+ping 10.10.20.1
+ping 10.10.20.2
+ping 10.10.10.10
+tracert 10.10.10.10
+
+Expected: all destinations respond; the remote PC is reached through RTA.
+Repeat pings after initial timeouts and investigate any persistent packet loss.
+These are verification instructions, not evidence of a new test run.

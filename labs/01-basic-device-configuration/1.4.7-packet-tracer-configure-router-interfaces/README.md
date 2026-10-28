@@ -1,10 +1,7 @@
 # Lab 1.4.7 — Packet Tracer: Configure Router Interfaces
 
 **Course:** CCNAv7 — Switching, Routing, and Wireless Essentials (SRWE)  
-**Module:** 1 — Basic Device Configuration  
-**Platform:** Cisco Packet Tracer  
-**Result:** **Completed — 100%** (learner-confirmed)  
-**Date:** 2026-10-28
+**Environment:** Cisco Packet Tracer; routers R1 and R2, four access switches, four PCs, WAN/Internet segment, dual-stack server
 
 ## Objective
 

@@ -1,9 +1,7 @@
 # Lab 1.5.10 — Packet Tracer: Verify Directly Connected Networks
 
 **Course:** CCNAv7 — Switching, Routing, and Wireless Essentials (SRWE)  
-**Module:** 1 — Basic Device Configuration  
-**Result:** Completed — **100%**, as confirmed by the learner  
-**Scope:** IPv4 and IPv6 directly connected networks, routing-table inspection, interface troubleshooting, and end-to-end reachability.
+**Environment:** Cisco Packet Tracer; routers R1 and R2, four access switches, four PCs, WAN/Internet segment, dual-stack server
 
 ## Objective
 

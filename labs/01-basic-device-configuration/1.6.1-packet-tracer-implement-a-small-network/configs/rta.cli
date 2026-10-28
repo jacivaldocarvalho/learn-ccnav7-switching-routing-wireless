@@ -1,0 +1,31 @@
+configure terminal
+hostname RTA
+service password-encryption
+enable secret Ciscoenpa55
+banner motd #Unauthorized access is prohibited.#
+line console 0
+ password Ciscolinepa55
+ login
+ logging synchronous
+exit
+line aux 0
+ password Ciscolinepa55
+ login
+exit
+line vty 0 4
+ transport input all
+ password Ciscolinepa55
+ login
+exit
+interface GigabitEthernet0/0
+ description LAN_SW1_PC1
+ ip address 10.10.10.1 255.255.255.0
+ no shutdown
+exit
+interface GigabitEthernet0/1
+ description LAN_SW2_PC2
+ ip address 10.10.20.1 255.255.255.0
+ no shutdown
+exit
+end
+copy running-config startup-config

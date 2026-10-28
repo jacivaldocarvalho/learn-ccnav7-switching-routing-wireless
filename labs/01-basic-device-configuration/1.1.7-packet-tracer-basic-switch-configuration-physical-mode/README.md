@@ -1,9 +1,7 @@
-# Lab 1.1.7 — Basic Switch Configuration (Physical Mode)
+# Lab 1.1.7 — Packet Tracer: Basic Switch Configuration (Physical Mode)
 
 **Course:** CCNAv7 — Switching, Routing, and Wireless Essentials (SRWE)  
-**Module:** 1  
-**Platform:** Cisco Packet Tracer, Physical Mode  
-**Status:** Completed (confirmed by learner after correcting the VLAN name)
+**Environment:** Cisco Packet Tracer, Physical Mode; Cisco Catalyst WS-C3650-24PS switch (IOS XE 16.3.2), PC-A
 
 ## Objective
 

@@ -1,10 +1,7 @@
 # Lab 1.3.6 — Packet Tracer: Configure SSH
 
 **Course:** CCNAv7 — Switching, Routing, and Wireless Essentials (SRWE)  
-**Module:** 1 — Basic Device Configuration  
-**Platform:** Cisco Packet Tracer  
-**Result:** **Completed — 100%** (confirmed by the learner after correcting the SSH username)  
-**Lab date:** 2026-10-28
+**Environment:** Cisco Packet Tracer; switch S1, PC1, SSH remote management
 
 ## Objective
 
