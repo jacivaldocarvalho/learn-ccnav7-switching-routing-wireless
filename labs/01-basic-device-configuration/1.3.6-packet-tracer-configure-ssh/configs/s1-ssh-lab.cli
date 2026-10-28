@@ -1,0 +1,23 @@
+! Lab-only configuration. Run from privileged EXEC on S1.
+! Prerequisites: hostname S1, VLAN 1 IP 10.10.10.2/24, working management access.
+! Do not use lab password 'cisco' or RSA 1024 in production.
+configure terminal
+service password-encryption
+ip domain-name netacad.pka
+crypto key generate rsa
+! When prompted for the modulus size, enter: 1024
+username administrator secret cisco
+ip ssh version 2
+line vty 0 15
+ login local
+ transport input ssh
+ no password
+exit
+end
+! Verify SSH before saving:
+show ip ssh
+show running-config | include username
+show running-config | section line vty
+! Test a NEW SSH session from PC1: ssh -l administrator 10.10.10.2
+! Only after successful validation:
+copy running-config startup-config

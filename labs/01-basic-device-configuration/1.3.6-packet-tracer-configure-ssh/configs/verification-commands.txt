@@ -1,0 +1,15 @@
+# PC1 > Desktop > Command Prompt
+# Before migration:
+telnet 10.10.10.2
+# After migration, Telnet should be rejected:
+telnet 10.10.10.2
+# SSH with the exact username required by the assessment:
+ssh -l administrator 10.10.10.2
+
+# S1 privileged EXEC:
+show ip ssh
+show running-config | include domain-name
+show running-config | include username
+show running-config | section line vty
+show running-config | include service password-encryption
+show startup-config
