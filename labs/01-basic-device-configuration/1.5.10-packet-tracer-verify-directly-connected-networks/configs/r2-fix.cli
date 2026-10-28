@@ -1,0 +1,5 @@
+configure terminal
+interface GigabitEthernet0/0/1
+ no ipv6 address 2001:DB8:C0DE:14::1/64
+ ipv6 address 2001:DB8:C0DE:13::1/64
+end

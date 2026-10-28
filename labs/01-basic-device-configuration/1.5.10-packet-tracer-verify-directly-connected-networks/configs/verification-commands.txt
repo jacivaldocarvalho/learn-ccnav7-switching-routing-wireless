@@ -1,0 +1,26 @@
+R1:
+show ip interface brief | exclude unassigned
+show ip route | begin Gate
+show interfaces | include Desc|conn
+show interfaces GigabitEthernet0/0/0 | include Duplex|duplex
+
+R2:
+show ipv6 interface brief
+show ipv6 route
+show running-config | include ipv6|interface
+
+PC1:
+ping 172.16.20.138
+ping 64.100.1.10
+
+PC2:
+ping 172.16.20.10
+ping 64.100.1.10
+
+PC3:
+ping 2001:DB8:C0DE:13::A
+ping 2001:DB8:100:1::A
+
+PC4:
+ping 2001:DB8:C0DE:12::A
+ping 2001:DB8:100:1::A

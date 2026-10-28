@@ -1,0 +1,9 @@
+configure terminal
+interface GigabitEthernet0/0/0
+ no shutdown
+ exit
+interface Serial0/1/0
+ no ip address
+ ip address 209.165.200.225 255.255.255.252
+ exit
+end
