@@ -1,0 +1,21 @@
+R1 privileged EXEC:
+show ip interface brief
+show ip route
+show running-config interface GigabitEthernet0/0
+show running-config interface GigabitEthernet0/1
+
+PC1 Command Prompt:
+ping 172.16.20.1
+ping 172.16.20.138
+ping 64.100.1.10
+
+R2 privileged EXEC:
+show ipv6 interface brief
+show ipv6 route
+show running-config
+
+PC3 Command Prompt:
+ipconfig /all
+ping 2001:DB8:C0DE:12::1
+ping 2001:DB8:C0DE:13::A
+ping 2001:DB8:100:1::A

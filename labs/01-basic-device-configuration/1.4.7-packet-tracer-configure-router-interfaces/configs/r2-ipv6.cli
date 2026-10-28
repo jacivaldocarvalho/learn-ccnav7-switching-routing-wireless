@@ -1,0 +1,16 @@
+! Lab-only commands. Serial0/0/1 was preconfigured; leave unchanged.
+configure terminal
+ipv6 unicast-routing
+interface GigabitEthernet0/0
+ description LAN_PC3_SW3
+ ipv6 address 2001:DB8:C0DE:12::1/64
+ ipv6 address FE80::2 link-local
+ no shutdown
+exit
+interface GigabitEthernet0/1
+ description LAN_PC4_SW4
+ ipv6 address 2001:DB8:C0DE:13::1/64
+ ipv6 address FE80::2 link-local
+ no shutdown
+end
+! Optional after successful validation: copy running-config startup-config
