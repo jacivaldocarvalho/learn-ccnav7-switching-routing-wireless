@@ -1,0 +1,17 @@
+! On S1 (privileged EXEC)
+show version
+show running-config
+show startup-config
+show interface vlan 99
+show ip interface brief
+show ipv6 interface brief
+show vlan brief
+show interface gigabitEthernet1/0/6
+show running-config | section line vty
+show flash:
+
+! On PC-A (Packet Tracer Command Prompt)
+ipconfig /all
+ping 192.168.1.2
+ping 2001:DB8:ACAD:1::2
+telnet 192.168.1.2

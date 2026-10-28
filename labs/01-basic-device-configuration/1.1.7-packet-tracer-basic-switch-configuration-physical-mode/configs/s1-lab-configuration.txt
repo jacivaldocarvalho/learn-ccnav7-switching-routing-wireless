@@ -1,0 +1,42 @@
+! Packet Tracer lab configuration — educational only
+! Apply from privileged EXEC using configure terminal.
+! Lab passwords are deliberately omitted from this reusable file.
+! Replace <LAB_ENABLE_SECRET> and <LAB_VTY_PASSWORD> as required.
+configure terminal
+hostname S1
+no ip domain-lookup
+service password-encryption
+enable secret <LAB_ENABLE_SECRET>
+banner motd #
+Unauthorized access is strictly prohibited.
+#
+vlan 99
+ no name
+exit
+interface vlan 99
+ ip address 192.168.1.2 255.255.255.0
+ ipv6 address 2001:DB8:ACAD:1::2/64
+ ipv6 address FE80::2 link-local
+ no shutdown
+exit
+interface range GigabitEthernet1/0/1 - 24
+ switchport mode access
+ switchport access vlan 99
+exit
+interface range GigabitEthernet1/1/1 - 4
+ switchport mode access
+ switchport access vlan 99
+exit
+ip default-gateway 192.168.1.1
+line console 0
+ password <LAB_CONSOLE_PASSWORD>
+ login
+ logging synchronous
+exit
+line vty 0 15
+ password <LAB_VTY_PASSWORD>
+ login
+ transport input telnet
+exit
+end
+copy running-config startup-config
