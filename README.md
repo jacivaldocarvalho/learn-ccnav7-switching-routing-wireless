@@ -1,10 +1,9 @@
-# CCNAv7: Switching, Routing, and Wireless Essentials (SRWE) 
+# CCNAv7: Switching, Routing, and Wireless Essentials (SRWE)
 
 ![Cisco](https://img.shields.io/badge/Cisco-CCNAv7-049FD9?logo=cisco&logoColor=white)
 
-
 **Provider:** NIC.br / Cisco Networking Academy  
-**Status:** Module 01 study and review underway; practical labs pending  
+**Status:** Module 01 study, review, and seven practical labs completed; Module 02 is next  
 **Purpose:** Professional knowledge refresh, hands-on networking, and reproducible technical reference.
 
 ## Table of Contents
@@ -30,26 +29,28 @@ This is an independent English-language study repository aligned with the learne
 learn-ccnav7-switching-routing-wireless/
 ├── README.md
 ├── modules/          # 16 core modules and one supplemental module
-├── exams/            # Assessment inventory and future reviews
-├── labs/             # Independent or confirmed hands-on activities
+├── exams/            # Assessment inventory; detailed reviews pending
+├── labs/
+│   └── 01-basic-device-configuration/  # Seven completed Packet Tracer labs
 └── assets/           # Shared diagrams and supporting assets
 ```
 
 ### Current Progress
 
-| Assessment | Status |
+| Activity | Status |
 |---|---|
-| Module 01 Review | Completed | 
-| Checkpoint Exams | Completed  |
-| labs | Pending | 
+| Module 01 study and review | Completed |
+| Module 01 practical labs | Completed — 7 documented labs with screenshots and supporting artifacts |
+| Checkpoint exams | Completion previously recorded; detailed reviews pending |
+| Module 02 — Switching Concepts | Next — not started |
 
-
+Module 01 now covers exploration of Packet Tracer workspaces, basic switch and router configuration, SSH, IPv4/IPv6 interfaces, directly connected networks, and implementation of a small network. The next study stage is Module 02 — Switching Concepts.
 
 ## Confirmed Modules
 
 | No. | Module | Status |
 |---|---|---|
-| 01 | [Basic Device Configuration](modules/01-basic-device-configuration/README.md) | In progress (labs pending) |
+| 01 | [Basic Device Configuration](modules/01-basic-device-configuration/README.md) | Completed — study, review, and labs |
 | 02 | [Switching Concepts](modules/02-switching-concepts/README.md) | Not started |
 | 03 | [VLANs](modules/03-vlans/README.md) | Not started |
 | 04 | [Inter-VLAN Routing](modules/04-inter-vlan-routing/README.md) | Not started |
@@ -72,20 +73,31 @@ learn-ccnav7-switching-routing-wireless/
 The CCNAv7 SRWE course includes five checkpoint exams, an initial knowledge check, three practice Packet Tracer assessments, a practice
 final exam, a course final exam, and a final Packet Tracer assessment.
 
-Assessment documentation will be added progressively as the course advances.
+Checkpoint exam completion was recorded in the project progress table. The [assessment inventory](exams/README.md) still contains no detailed reviews, scores, or individual outcomes; those records remain to be added. Lab completion is tracked separately in the reports below.
 
 ## Labs and Evidence
 
-Actual lab directories, configurations, topologies, and evidence will be added only after receiving the corresponding instructions or performing independent exercises. Never publish live credentials. Packet Tracer files must be shareable before committing.
+All seven Module 01 labs are completed and documented under [`labs/01-basic-device-configuration/`](labs/01-basic-device-configuration/). Each report includes the activity context, procedures, observed results, and screenshots; configuration and verification files are included where available.
+
+| Lab | Report | Main topics |
+|---|---|---|
+| 1.0.5 | [Logical and Physical Mode Exploration](labs/01-basic-device-configuration/1.0.5-packet-tracer-logical-and-physical-mode-exploration/README.md) | Workspaces, cabling, console access, device names |
+| 1.1.7 | [Basic Switch Configuration (Physical Mode)](labs/01-basic-device-configuration/1.1.7-packet-tracer-basic-switch-configuration-physical-mode/README.md) | Switch setup, management VLAN, dual-stack connectivity |
+| 1.3.6 | [Configure SSH](labs/01-basic-device-configuration/1.3.6-packet-tracer-configure-ssh/README.md) | Local authentication, RSA keys, SSH-only management |
+| 1.4.7 | [Configure Router Interfaces](labs/01-basic-device-configuration/1.4.7-packet-tracer-configure-router-interfaces/README.md) | IPv4/IPv6 interfaces, gateways, connectivity |
+| 1.5.10 | [Verify Directly Connected Networks](labs/01-basic-device-configuration/1.5.10-packet-tracer-verify-directly-connected-networks/README.md) | Routing tables, interface troubleshooting, reachability |
+| 1.6.1 | [Implement a Small Network](labs/01-basic-device-configuration/1.6.1-packet-tracer-implement-a-small-network/README.md) | Two routed LANs, switch management, ping and traceroute |
+| 1.6.2 | [Configure Basic Router Settings (Physical Mode)](labs/01-basic-device-configuration/1.6.2-packet-tracer-configure-basic-router-settings-physical/README.md) | Router security, SSH over IPv4/IPv6, loopback, SLAAC |
+
+The reports distinguish captured results from configuration instructions and note any missing assessment evidence. Completion reflects the learner's confirmed progress; available screenshots and artifacts establish the documented technical results.
 
 ## Practical Insights: Shell and Python for Network Engineering
 
-Each module will include a targeted enrichment section connecting Cisco networking concepts to useful Linux shell or Python tasks, such as parsing command outputs, validating IP plans, checking connectivity, or auditing configuration data. These exercises will be labeled as independent educational/professional extensions, not official NetAcad activities. Examples and results will be identified as illustrative or observed.
-
+Module 01 already includes [Shell and Python examples](modules/01-basic-device-configuration/README.md#7-practical-insights--shell-and-python) for host-side checks and IPv4 management-plan validation. Later modules will add relevant tasks as their technical notes are developed. These examples are independent educational and professional extensions; each report identifies illustrative examples and observed results.
 
 ## References and Disclaimer
 
 - NIC.br / Cisco Networking Academy — learner-provided SRWE course outline.
-- Cisco IOS and Packet Tracer references will be added as needed for verified lesson content.
+- Module notes and lab reports include Cisco IOS and Packet Tracer references relevant to their documented topics.
 
 This independent educational repository is not an official Cisco or NIC.br publication. No certification or course completion is claimed.

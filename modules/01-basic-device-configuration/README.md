@@ -1,7 +1,7 @@
 # Module 01 — Basic Device Configuration
 
 > **Course:** CCNAv7 Switching, Routing, and Wireless Essentials (NIC.br)  
-> **Status:** Study notes prepared; practical activities and evidence pending.  
+> **Status:** Study, review, and seven practical labs completed; reports and evidence available in `labs/01-basic-device-configuration/`.  
 > **Source scope:** Sections 1.0–1.6 supplied by the learner. The notes below are original synthesis; professional recommendations and automation examples are supplementary.
 
 > **Diagram policy:** Mermaid figures below are original educational reconstructions based on the supplied course topics, not official Cisco images or evidence of executed labs. Labels and addresses are illustrative unless otherwise noted.
@@ -39,9 +39,9 @@
     - [Python: verify an IPv4 management addressing plan](#python-verify-an-ipv4-management-addressing-plan)
     - [Further professional extensions](#further-professional-extensions)
   - [8. Common Mistakes and Exam Tips](#8-common-mistakes-and-exam-tips)
-  - [9. Practical Activities — Pending](#9-practical-activities--pending)
+  - [9. Practical Activities — Completed](#9-practical-activities--completed)
   - [10. Module Summary and Integration (1.6.3)](#10-module-summary-and-integration-163)
-    - [Practice integration — two LANs interconnected by R1 and R2](#practice-integration--two-lans-interconnected-by-r1-and-r2)
+    - [Practice integration — two LANs interconnected by RTA](#practice-integration--two-lans-interconnected-by-rta)
     - [Assessment documentation policy](#assessment-documentation-policy)
   - [11. Key Takeaways](#11-key-takeaways)
   - [12. Further Study](#12-further-study)
@@ -419,20 +419,21 @@ This validates addressing consistency only; it does **not** test live connectivi
 9. Router interface activation requires `no shutdown` and suitable physical connectivity; IPv6 inter-interface forwarding also needs the appropriate global setting.
 10. Treat sample command outputs as examples, not evidence that a lab has been completed.
 
-## 9. Practical Activities — Pending
+## 9. Practical Activities — Completed
 
-The supplied lesson identifies these activities, without completed results:
+All seven Module 01 Packet Tracer labs have been completed, as confirmed by the learner. The reports below document the procedures, observed results, and screenshots, with configuration and verification files where available.
 
-| Activity | Source section | Status |
+| Activity | Report | Status |
 |---|---|---|
-| Basic Switch Configuration Lab | 1.1.7 | Evidence pending |
-| Configure SSH (Packet Tracer) | 1.3.6 | Evidence pending |
-| Configure Router Interfaces (Packet Tracer) | 1.4.7 | Evidence pending |
-| Verify Directly Connected Networks (Packet Tracer) | 1.5.10 | Evidence pending |
-| Implement a Small Network (Packet Tracer) | 1.6.1 | Pending |
-| Configure Basic Router Settings (Lab) | 1.6.2 | Pending |
+| 1.0.5 | [Logical and Physical Mode Exploration](../../labs/01-basic-device-configuration/1.0.5-packet-tracer-logical-and-physical-mode-exploration/README.md) | Completed |
+| 1.1.7 | [Basic Switch Configuration (Physical Mode)](../../labs/01-basic-device-configuration/1.1.7-packet-tracer-basic-switch-configuration-physical-mode/README.md) | Completed |
+| 1.3.6 | [Configure SSH](../../labs/01-basic-device-configuration/1.3.6-packet-tracer-configure-ssh/README.md) | Completed |
+| 1.4.7 | [Configure Router Interfaces](../../labs/01-basic-device-configuration/1.4.7-packet-tracer-configure-router-interfaces/README.md) | Completed |
+| 1.5.10 | [Verify Directly Connected Networks](../../labs/01-basic-device-configuration/1.5.10-packet-tracer-verify-directly-connected-networks/README.md) | Completed |
+| 1.6.1 | [Implement a Small Network](../../labs/01-basic-device-configuration/1.6.1-packet-tracer-implement-a-small-network/README.md) | Completed |
+| 1.6.2 | [Configure Basic Router Settings (Physical Mode)](../../labs/01-basic-device-configuration/1.6.2-packet-tracer-configure-basic-router-settings-physical/README.md) | Completed |
 
-For each completed activity, add the actual topology, addressing, device/interface mapping, configurations, observed verification output, troubleshooting actions, and screenshots where permitted. Never represent predicted output as observed evidence.
+Each report identifies the available evidence and any missing assessment captures. The instructional examples in these module notes remain separate from the observed outputs recorded in the lab reports.
 
 ## 10. Module Summary and Integration (1.6.3)
 
@@ -446,24 +447,25 @@ The learner-provided closing summary consolidates the following practical skills
 | Basic router configuration | Configure device identity, local access, IPv4/IPv6 physical interfaces, and logical loopbacks | `show ip interface brief`, `show ipv6 interface brief` |
 | Directly connected networks | Interpret interface status, IPv4/IPv6 routing tables, connected and local routes, output filters, and command history | `show ip route`, `show ipv6 route`, `show interfaces`, `show history` |
 
-### Practice integration — two LANs interconnected by R1 and R2
+### Practice integration — two LANs interconnected by RTA
 
-Section 1.6.1 describes a Packet Tracer activity with two routers and two LANs, requiring address verification and connectivity checks between LANs. **The exact topology, addresses, routes, and observed results have not been provided.** The diagram below is conceptual only; it is not a reconstruction of the official Packet Tracer file.
+The completed [Lab 1.6.1 — Implement a Small Network](../../labs/01-basic-device-configuration/1.6.1-packet-tracer-implement-a-small-network/README.md) uses one Cisco 1941 router (`RTA`), two Cisco 2960 switches, and two PCs. RTA connects `10.10.10.0/24` through `GigabitEthernet0/0` and `10.10.20.0/24` through `GigabitEthernet0/1`.
 
 ```mermaid
 flowchart LR
-    A[LAN A] --- R1[Router R1]
-    R1 ---|Inter-router link| R2[Router R2]
-    R2 --- B[LAN B]
+    PC1["PC-1 · 10.10.10.10/24"] --- SW1["SW1 · 10.10.10.2/24"]
+    SW1 ---|"G0/1 ↔ G0/0 · 10.10.10.1/24"| RTA["RTA"]
+    RTA ---|"G0/1 ↔ G0/1 · 10.10.20.1/24"| SW2["SW2 · 10.10.20.2/24"]
+    SW2 --- PC2["PC-2 · 10.10.20.10/24"]
 ```
 
-A valid verification workflow is to inspect host IP addresses and gateways, verify router interface states, inspect route tables on both routers, and test connectivity within and between LANs. Do not assume that interface addressing alone establishes remote-LAN reachability; routes to the remote networks must exist.
+This diagram summarizes the topology documented in the lab report. The supplied screenshots show both router interfaces `up/up`, directly connected routes for both LANs, ping replies across the subnets, and a two-hop traceroute from PC-1 to PC-2 through `10.10.10.1`. Initial ping losses are recorded in the report; their precise cause was not established.
 
-Section 1.6.2 identifies three lab phases: (1) build the topology and initialize devices, (2) configure devices and verify connectivity, and (3) display router information. These are **planned activities**, not recorded executions. Keep the activity status as **Pending** until actual Packet Tracer or hardware evidence is available.
+The completed [Lab 1.6.2 — Configure Basic Router Settings (Physical Mode)](../../labs/01-basic-device-configuration/1.6.2-packet-tracer-configure-basic-router-settings-physical/README.md) covers topology setup, device configuration and connectivity, and router information inspection. Its report includes IPv4/IPv6 interface verification, SSH access to Loopback0 over both protocols, saved configuration inspection, and server SLAAC results.
 
 ### Assessment documentation policy
 
-The module review assessment is documented separately in [`../../exams/module-01-review-questions.md`](../../exams/module-01-review-questions.md). This README intentionally contains no copied quiz questions or answer key. The reported review result was 11 correct out of 12, with one unresolved item involving the SYST LED; it does not establish that the practical labs are complete.
+The previously reported module review result was 11 correct out of 12, with one unresolved item involving the SYST LED. A detailed review file is not currently included in the [assessment inventory](../../exams/README.md). This README contains no copied quiz questions or answer key. Practical lab completion is recorded separately in section 9 and supported by the linked lab reports.
 
 ## 11. Key Takeaways
 
